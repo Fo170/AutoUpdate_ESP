@@ -1,10 +1,8 @@
 // #define FIRMWARE_VERSION "1.0.0"
-const char* FirmwareVersion = FIRMWARE_VERSION;
-
-#define DEBUG_AUTOUPDATE_ESP
-
 // #define FIRMWARE_URL_BIN   "http://url/firmware.bin"
 // #define FIRMWARE_URL_TXT   "http://url/firmware.txt"
+//#define DEBUG_AUTOUPDATE_ESP
+const char* FirmwareVersion = FIRMWARE_VERSION;
 const char *firmwareURL = FIRMWARE_URL_BIN;
 const char *firmwareTXT = FIRMWARE_URL_TXT;
 
