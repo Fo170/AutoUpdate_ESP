@@ -1,0 +1,30 @@
+{
+  "build": 
+  {
+   "name": "AutoUpdate_ESP",
+   "version": "1.0.0",
+   "frameworks": ["arduino"],
+   "platforms": ["espressif8266"],["espressif32"],
+   "headers": "AutoUpdate_ESP.h"
+  },
+  
+  
+  "keywords": "AutoUpdate_ESP, OTA, ESP8266, ESP32, Update, Over, the, air",
+  "description": "Arduino library for AutoUpdate ESP8266 & ESP32",
+  "authors":
+  [
+    {
+      "name": "Olivier FOURNET",
+      "email": "olivier.fournet@free.fr",
+      "maintainer": true
+    }
+  ],
+  "homepage": "https://github.com/Fo170/AutoUpdate_ESP",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/Fo170/AutoUpdate_ESP.git"
+  },
+ 
+  "license": "GPL-3.0 license"
+}
