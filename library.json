@@ -1,30 +1,34 @@
 {
-  "build": 
-  {
-   "name": "AutoUpdate_ESP",
-   "version": "1.0.0",
-   "frameworks": ["arduino"],
-   "platforms": ["espressif8266"],["espressif32"],
-   "headers": "AutoUpdate_ESP.h"
-  },
-  
-  
-  "keywords": "AutoUpdate_ESP, OTA, ESP8266, ESP32, Update, Over, the, air",
-  "description": "Arduino library for AutoUpdate ESP8266 & ESP32",
-  "authors":
-  [
+  "name": "AutoUpdate_ESP",
+  "version": "1.0.0",
+  "description": "Automatic OTA update library for ESP32/ESP8266 with version checking",
+  "keywords": ["esp32", "esp8266", "ota", "update", "firmware", "http"],
+  "authors": [
     {
-      "name": "Olivier FOURNET",
-      "email": "olivier.fournet@free.fr",
-      "maintainer": true
+      "name": "Fo170",
+      "url": "https://github.com/Fo170"
     }
   ],
-  "homepage": "https://github.com/Fo170/AutoUpdate_ESP",
-  "repository":
-  {
+  "repository": {
     "type": "git",
     "url": "https://github.com/Fo170/AutoUpdate_ESP.git"
   },
- 
-  "license": "GPL-3.0 license"
+  "license": "GPL-3.0 license",
+  "frameworks": ["arduino"],
+  "platforms": ["espressif32", "espressif8266"],
+  "dependencies": [
+    {
+      "name": "ArduinoJson",
+      "version": "^6.0.0"
+    }
+  ],
+  "export": {
+    "include": [
+      "src/*",
+      "examples/*",
+      "README.md",
+      "LICENSE"
+    ]
+  }
 }
+
