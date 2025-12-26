@@ -1,4 +1,4 @@
-# AutoUpdate_ESP v1.0.0
+# AutoUpdate_ESP v1.0.1
 Mise à jour automatique (bibliothèque qui fournit des éléments interactifs pour vos mises à jour en direct sur ESP8266 et ESP32).
 
 ## 🎯 Description  
@@ -20,7 +20,7 @@ AutoUpdate_ESP est un projet visant à automatiser la mise à jour des firmwares
 - Restauration automatique en cas d'échec de démarrage
 - Rappel de progression pour une interface utilisateur personnalisée
 
-# AutoUpdate_ESP v1.0.0
+# AutoUpdate_ESP v1.0.1
 Auto Update (library which provides interactive elements for your over-the-air updates on ESP8266 and ESP32).
 
 ## 🎯 Description

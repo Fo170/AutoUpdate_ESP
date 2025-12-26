@@ -1,6 +1,6 @@
 {
   "name": "AutoUpdate_ESP",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatic OTA update library for ESP32/ESP8266 with version checking",
   "keywords": ["esp32", "esp8266", "ota", "update", "firmware", "http"],
   "authors": [
