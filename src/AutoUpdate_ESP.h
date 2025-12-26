@@ -1,10 +1,12 @@
-// #define FIRMWARE_VERSION "1.0.0"
+// #define FIRMWARE_VERSION "1.0.1"
 // #define FIRMWARE_URL_BIN   "http://url/firmware.bin"
 // #define FIRMWARE_URL_TXT   "http://url/firmware.txt"
 //#define DEBUG_AUTOUPDATE_ESP
-const char* FirmwareVersion = FIRMWARE_VERSION;
+const char* FirmwareVersionLocal = FIRMWARE_VERSION;
 const char *firmwareURL = FIRMWARE_URL_BIN;
 const char *firmwareTXT = FIRMWARE_URL_TXT;
+
+String FW_version_en_ligne;
 
 int etat_update_firmware = 0;
 String lecture_fichier_distant(void);
@@ -80,7 +82,7 @@ int UpDateOrNot(void)
         // Comparaison de la version du firmware
         Serial.print("version_en_ligne : ");
         Serial.println(version_en_ligne);
-        
+        FW_version_en_ligne = String(version_en_ligne);
         if (strcmp(version_en_ligne, FirmwareVersion) > 0) 
         {
           // Mise à jour du firmware
