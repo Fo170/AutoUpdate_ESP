@@ -26,6 +26,23 @@ Auto Update (library which provides interactive elements for your over-the-air u
 ## 🎯 Description
 AutoUpdate_ESP is a project aimed at automating firmware or program updates for ESP modules (such as the ESP8266 or ESP32). This system allows connected microcontrollers to periodically check for new versions and download and install new firmware files if needed.
 
+## 📦 Installation
+
+### Via Arduino IDE
+1. Téléchargez cette bibliothèque en format ZIP
+2. Dans Arduino IDE : **Croquis → Inclure une bibliothèque → Ajouter la bibliothèque .ZIP**
+3. Sélectionnez le fichier ZIP téléchargé
+
+### Via PlatformIO (recommandé)
+
+Ajoutez la dépendance à votre `platformio.ini` :
+
+```ini
+# Pour cartes standard (ESP32, ESP8266, etc.)
+lib_deps = 
+    https://github.com/Fo170/AutoUpdate_ESP.git@^1.0.0
+```
+
 ## 🛠️ Features
 - Automatic detection of the version currently installed on the ESP.
 - Downloading of the new version from a server or repository.
