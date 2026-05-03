@@ -1,0 +1,34 @@
+{
+  "name": "AutoUpdate_ESP",
+  "version": "1.0.1",
+  "description": "Automatic OTA update library for ESP32/ESP8266 with version checking",
+  "keywords": ["esp32", "esp8266", "ota", "update", "firmware", "http"],
+  "authors": [
+    {
+      "name": "Fo170",
+      "url": "https://github.com/Fo170"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fo170/AutoUpdate_ESP.git"
+  },
+  "license": "GPL-3.0 license",
+  "frameworks": ["arduino"],
+  "platforms": ["espressif32", "espressif8266"],
+  "dependencies": [
+    {
+      "name": "ArduinoJson",
+      "version": "^6.0.0"
+    }
+  ],
+  "export": {
+    "include": [
+      "src/*",
+      "examples/*",
+      "README.md",
+      "LICENSE"
+    ]
+  }
+}
+
