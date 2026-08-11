@@ -4,13 +4,14 @@ AutoUpdate_ESP by Olivier FOURNET : https://github.com/Fo170/AutoUpdate_ESP8266
 
 Dependency Graph
 |-- AutoUpdate_ESP
+|-- NON_BLOCKING_DELAY
 |-- ESP8266httpUpdate @ 1.3
+|   |-- ESP8266HTTPClient @ 1.2
 |-- ESP8266WiFi @ 1.0
-|-- Bridge @ 1.7.0
 */
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
-#include <HTTPClient.h>
+#include <ESP8266HTTPClient.h>
 #include <ESP8266httpUpdate.h>
 
 const char* ssid = "ssid";
@@ -24,6 +25,8 @@ const char* password = "pass";
 #define FIRMWARE_URL_TXT   "http://site.free.fr/path_firmware/firmware.txt"
 
 #define FIRMWARE_VERSION "0.9"
+
+#define Use_LED_BUILTIN
 
 #include <AutoUpdate_ESP.h>
 

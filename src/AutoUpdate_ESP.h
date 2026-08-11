@@ -1,7 +1,11 @@
-// #define FIRMWARE_VERSION "1.0.2"
+// #define FIRMWARE_VERSION "1.0.4"
 // #define FIRMWARE_URL_BIN   "http://url/firmware.bin"
 // #define FIRMWARE_URL_TXT   "http://url/firmware.txt"
-//#define DEBUG_AUTOUPDATE_ESP
+// #define DEBUG_AUTOUPDATE_ESP
+// #define Use_LED_BUILTIN
+
+#include "Delay.h" // NON_BLOCKING_DELAY() — librairie header-only Fo170/NON_BLOCKING_DELAY
+
 const char* FirmwareVersionLocal = FIRMWARE_VERSION;
 const char *firmwareURL = FIRMWARE_URL_BIN;
 const char *firmwareTXT = FIRMWARE_URL_TXT;
@@ -24,9 +28,14 @@ void update_error(int err);
 void AutoUpdate(void);
 
 #if defined(ESP8266)
+    #include <ESP8266WiFi.h>
+    #include <ESP8266HTTPClient.h>
     #include <ESP8266httpUpdate.h> // Include the HTTPUpdate library for ESP8266
     ESP8266HTTPUpdate ESP_httpUpdate; // Use the correct object from the library
 #elif defined(ESP32)
+    #include <WiFi.h>
+    #include <HTTPClient.h>
+    #include <Update.h>
     #include <HTTPUpdate.h> // Include the required library
     HTTPUpdate ESP_httpUpdate; // Declare the httpUpdate object
 #endif
@@ -134,9 +143,9 @@ void AutoUpdate(void)
     // On a good connection the LED should flash regularly. On a bad connection the LED will be
     // on much longer than it will be off. Other pins than LED_BUILTIN may be used. The second
     // value is used to put the LED on. If the LED is on with HIGH, that value should be passed
-	  
+	#ifdef Use_LED_BUILTIN
     ESP_httpUpdate.setLedPin(LED_BUILTIN, LOW);
-	
+	#endif
     // Add optional callback notifiers
     ESP_httpUpdate.onStart(update_started);
     ESP_httpUpdate.onEnd(update_finished);
@@ -155,18 +164,18 @@ void AutoUpdate(void)
         case HTTP_UPDATE_FAILED:
         Serial.printf("HTTP_UPDATE_FAILD Error (%d): %s --> %s\n", ESP_httpUpdate.getLastError(), ESP_httpUpdate.getLastErrorString().c_str(), firmwareURL);
         Serial.println(F("Retry in 10secs!"));
-        delay(10000); // Wait 10secs
+        NON_BLOCKING_DELAY(10000); // Wait 10secs
         break;
  
         case HTTP_UPDATE_NO_UPDATES:
         Serial.println("HTTP_UPDATE_NO_UPDATES");
         Serial.println("Your code is up to date!");
-        delay(10000); // Wait 10secs
+        NON_BLOCKING_DELAY(10000); // Wait 10secs
         break;
  
         case HTTP_UPDATE_OK:
         Serial.println("HTTP_UPDATE_OK");
-        delay(1000); // Wait a second and restart
+        NON_BLOCKING_DELAY(1000); // Wait a second and restart
         ESP.restart();
         break;
       }

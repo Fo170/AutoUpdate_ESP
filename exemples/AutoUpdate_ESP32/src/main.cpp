@@ -6,6 +6,7 @@ Dependency Graph
 |-- HTTPClient @ 2.0.0
 |-- Update @ 2.0.0
 |-- AutoUpdate_ESP
+|-- NON_BLOCKING_DELAY
 |-- HTTPUpdate @ 2.0.0
 |-- WiFi @ 2.0.0
 */
@@ -28,6 +29,8 @@ const char* password = "pass";
 #define FIRMWARE_VERSION "0.9"
 
 #define LED_BUILTIN 2 // GPIO2 (D4) on ESP8266, GPIO2 (D2) on ESP32
+
+#define Use_LED_BUILTIN
 
 #include <AutoUpdate_ESP.h>
 
