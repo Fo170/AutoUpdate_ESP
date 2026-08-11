@@ -18,7 +18,7 @@ AutoUpdate_ESP est un projet visant à automatiser la mise à jour des firmwares
 
 ## 📦 Dépendances
 
-`AutoUpdate()` utilise `NON_BLOCKING_DELAY(...)` pour ses attentes (plus aucun `delay()`). Cette macro provient de la bibliothèque header-only `NON_BLOCKING_DELAY` (`Delay.h`) : **le header `AutoUpdate_ESP.h` l'inclut lui-même**, il suffit donc de la déclarer dans `lib_deps` (elle ne peut pas l'être dans `dependencies` du `library.json`, car `NON_BLOCKING_DELAY` n'est pas au registre PlatformIO — d'où l'URL git) :
+`AutoUpdate()` utilise `NON_BLOCKING_DELAY(...)` pour ses attentes (plus aucun `delay()`). Cette macro provient de la bibliothèque header-only `NON_BLOCKING_DELAY` (`Delay.h`) : **le header `AutoUpdate_ESP.h` l'inclut lui-même**, et la bibliothèque est **déclarée dans le `library.json`** (URL git dans le champ `version`) — PlatformIO l'installe donc automatiquement ; la ligne `NON_BLOCKING_DELAY` du `lib_deps` ci-dessous est **optionnelle** (à titre explicite) :
 
 ```ini
 lib_deps = 
