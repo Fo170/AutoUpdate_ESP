@@ -20,7 +20,7 @@
   "export": {
     "include": [
       "src/*",
-      "examples/*",
+      "exemples/*",
       "README.md",
       "LICENSE"
     ]
