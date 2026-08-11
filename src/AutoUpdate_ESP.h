@@ -1,4 +1,4 @@
-// #define FIRMWARE_VERSION "1.0.1"
+// #define FIRMWARE_VERSION "1.0.2"
 // #define FIRMWARE_URL_BIN   "http://url/firmware.bin"
 // #define FIRMWARE_URL_TXT   "http://url/firmware.txt"
 //#define DEBUG_AUTOUPDATE_ESP

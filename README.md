@@ -1,4 +1,4 @@
-# AutoUpdate_ESP v1.0.1
+# AutoUpdate_ESP v1.0.2
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Arduino Badge](https://img.shields.io/badge/framework-arduino-brightgreen?logo=arduino.svg)](https://www.arduino.cc/)
 [![PlatformIO](https://img.shields.io/badge/platformio-ESP8266,ESP32-violet?logo=platformio)](https://platformio.org/)
@@ -25,7 +25,7 @@ AutoUpdate_ESP est un projet visant à automatiser la mise à jour des firmwares
 - Restauration automatique en cas d'échec de démarrage
 - Rappel de progression pour une interface utilisateur personnalisée
 
-# AutoUpdate_ESP v1.0.1
+# AutoUpdate_ESP v1.0.2
 Auto Update (library which provides interactive elements for your over-the-air updates on ESP8266 and ESP32).
 
 ## 🎯 Description
@@ -45,7 +45,7 @@ Ajoutez la dépendance à votre `platformio.ini` :
 ```ini
 # Pour cartes standard (ESP32, ESP8266, etc.)
 lib_deps = 
-    https://github.com/Fo170/AutoUpdate_ESP.git@^1.0.0
+    https://github.com/Fo170/AutoUpdate_ESP.git@^1.0.2
 ```
 
 ## 🛠️ Features
